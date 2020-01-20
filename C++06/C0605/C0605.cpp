@@ -1,0 +1,21 @@
+#include <cstdlib>
+#include <iostream>
+using namespace std;
+
+void number(int n);	//ㄧ计
+
+int main(int argc, char *argv[])
+{
+	number(5);	//肚患5倒numberㄧ计
+	number(58);	//肚患58倒numberㄧ计
+	number(135);	//肚患135倒numberㄧ计
+	system("PAUSE");
+	return EXIT_SUCCESS;
+}
+void number(int n)	//耞5计ㄧ计
+{
+	if (n % 5 == 0)	//璝把计n埃5緇计0
+		cout << n << " 琌 5 计\n";
+	else
+		cout << n << " ぃ琌 5 计\n";
+}

@@ -1,0 +1,30 @@
+# Project: C0611
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = C0611.o $(RES)
+LINKOBJ  = C0611.o $(RES)
+LIBS =  -L"F:/Dev-Cpp/lib"  
+INCS =  -I"F:/Dev-Cpp/include" 
+CXXINCS =  -I"F:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"F:/Dev-Cpp/include/c++/3.4.2/backward"  -I"F:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"F:/Dev-Cpp/include/c++/3.4.2"  -I"F:/Dev-Cpp/include" 
+BIN  = C0611.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before C0611.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "C0611.exe" $(LIBS)
+
+C0611.o: C0611.cpp
+	$(CPP) -c C0611.cpp -o C0611.o $(CXXFLAGS)
